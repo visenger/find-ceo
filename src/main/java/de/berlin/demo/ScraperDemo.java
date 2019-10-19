@@ -13,6 +13,6 @@ public class ScraperDemo {
         List<String> csvData = scraper.getCSV();
         scraper.close();
 
-        Writer.writerCSV(csvData, "???");
+        Writer.writerCSV(csvData, "???"); //todo: initial api
     }
 }
