@@ -1,0 +1,36 @@
+plugins {
+    id 'java'
+    id 'application'
+}
+
+apply plugin:'application'
+
+group 'de.berlin'
+version '1.0-SNAPSHOT'
+
+sourceCompatibility = 1.8
+
+repositories {
+    mavenCentral()
+}
+
+dependencies {
+    testImplementation('org.junit.jupiter:junit-jupiter:5.5.2')
+    compile group: 'org.jsoup', name: 'jsoup', version: '1.11.3'
+    compile group: 'org.seleniumhq.selenium', name: 'selenium-java', version: '3.141.59'
+    compile group: 'com.typesafe', name: 'config', version: '1.4.0'
+}
+
+jar {
+    manifest {
+        attributes(
+                "Main-Class": "de.berlin.demo.App"
+        )
+    }
+}
+
+mainClassName = "de.berlin.demo.App"
+
+
+
+
